@@ -1,0 +1,157 @@
+#overlay
+{
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.5);
+}
+.cnt223 a
+{
+  text-decoration: none;
+}
+.popup
+{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  left: 0;
+  top: 0;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0,0,0, 0.5);
+}
+.cnt223
+{
+  min-width: 600px;
+  width: 600px;
+  min-height: 150px;
+  margin: 300px auto;
+  top:-4%;
+  background: #f3f3f3;
+  position: relative;
+  z-index: 103;
+  padding: 15px 35px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #000;
+}
+.cnt223 p
+{
+  clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.cnt223 p a
+{
+  color: #d91900;
+  font-weight: bold;
+}
+.cnt223 .x
+{
+  float: right;
+  height: 35px;
+  left: 22px;
+  position: relative;
+  top: -25px;
+  width: 34px;
+}
+.cnt223 .x:hover
+{
+  cursor: pointer;
+}
+
+.closeMsg
+{
+  color: #333 !important;
+  float: right;
+  font-size: 28px;
+  font-weight: bold !important;
+  margin-top: -2px;
+  margin-right: -30px !important;
+}
+
+.percentOff
+{
+  font-size: 60px !important;
+  font-weight: bold;
+  font-family: monospace !important;
+  text-align: center;
+  color: black !important;
+}
+
+.p2,.p3,.p4,#today-greet,.codePercent
+{
+  text-align: center !important;
+}
+.p3
+{
+  color: #ccccc;
+  font-size: 14px !important;
+}
+.p4
+{
+  font-size: 17px !important;
+  color: red !important;
+}
+#today-greet
+{
+  font-family: cursive !important;
+  width: 50%;
+  margin: auto;
+  font-size: 35px !important;
+}
+.codePercent
+{
+  width: 40%;
+  margin: auto;
+  background-color: black;
+  padding: 14px;
+  color:white !important;
+}
+
+
+/***************************** TABLET WINDOW SIZE *****************************/
+@media screen and (max-width: 1150px)
+{
+  .cnt223
+  {
+    width: 400px;
+    min-width: 400px;
+  }
+  #today-greet
+  {
+    font-family: cursive !important;
+    width: 60%;
+    margin: auto;
+    font-size: 25px !important;
+  }
+}
+
+/***************************** MOBILE WINDOW SIZE *****************************/
+@media screen and (max-width: 540px)
+{
+  .cnt223
+  {
+    width: 300px;
+    min-width: 300px;
+  }
+
+  .percentOff { font-size: 50px !important; }
+
+  #today-greet
+  {
+    font-family: cursive !important;
+    width: 80%;
+    margin: auto;
+    font-size: 25px !important;
+  }
+
+  .codePercent { width: 60%; }
+}

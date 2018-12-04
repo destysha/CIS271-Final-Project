@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Shoes | Lil Cutie Boutique </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--                    USED FOR ICONS AND FONT TYPES                      -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- pugin css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="plugin-css-js/style1.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="plugin-css-js/style2.css">
+
+    <!--                           CSS STYLING                               -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/search.css">
+  </head>
+
+  <!--                         TUTUS.HTML BODY                               -->
+  <body>
+    <main class="content">
+      <!--                             ABOVE TOP NAV                         -->
+      <nav>
+          <ul class="searchnav">
+            <li class="nav-left">
+              <a href="../links/signup.html">
+              <img src="../images/icons/ic2.png" id="create">
+              </a>
+            </li>
+
+            <li class="nav-left">
+              <button class="openBtn" onclick="openSearch()">
+                <img src="../images/icons/search.png" id="search"> </button>
+            </li>
+
+            <li class="nav-left cart_dropdown">
+                <a href="#" id="cart">
+                  <img src="../images/icons/scart.png" id="scart"></a>
+                  <!-- SHOPPING CART SECTION -->
+                  <section class="shopping-cart">
+
+                    <ul class="shopping-cart-items">
+                      <li class="clearfix">
+                        <img src="../images/content/t1.png" class="cart-items" alt="item1" />
+                        <span class="item-name">Shine Bright Like a Diamond Set</span>
+                        <span class="item-price">$49.99</span>
+                        <span class="item-quantity">Quantity: 01</span>
+                      </li>
+
+                      <li class="clearfix">
+                        <img src="../images/content/t6.jpg" class="cart-items" alt="item1" />
+                        <span class="item-name">Open Back Fashion Set</span>
+                        <span class="item-price">$49.99</span>
+                        <span class="item-quantity">Quantity: 01</span>
+                      </li>
+
+                      <li class="clearfix">
+                        <img src="../images/content/t4.jpeg" class="cart-items" alt="item1" />
+                        <span class="item-name">Fashion Headbands</span>
+                        <span class="item-price">$29.99</span>
+                        <span class="item-quantity">Quantity: 01</span>
+                      </li>
+                    </ul>
+
+                    <a href="#" class="button">Checkout</a>
+                  </section>
+            </li>
+
+            <li class="nav-center"></li>
+
+            <li class="nav-right">
+              <a href="https://www.facebook.com/lilcutieboutique/">
+              <img src="../images/icons/smn3.png" id="sm3">
+              </a>
+            </li>
+            <li class="nav-right">
+              <a href="https://www.instagram.com/LilCutieBoutique">
+              <img src="../images/icons/smn2.png" id="sm2">
+              </a>
+            </li>
+          </ul>
+      </nav>
+
+      <!-- SEARCH SECTION  -->
+      <section id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <article class="overlay-content">
+          <form action="#action_page.php">
+            <input type="text" id="myInput" onkeyup="searchList()" autocomplete="off"
+            placeholder="Search.." name="search">
+
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+            <section class="clearfix"></section>
+
+            <!--list to display-->
+            <ul id="myUL">
+              <li><a href="item1.html">Shine Bright Like a Diamond Set</a></li>
+              <li><a href="item2.html">Dad & Me Personalized Shirts</a></li>
+              <li><a href="item3.html">Mommy & Me Personalized Shirts</a></li>
+              <li><a href="item4.html">Fashion Trendy Headbands</a></li>
+              <li><a href="item5.html">Open Back Fashion Set</a></li>
+              <li><a href="item6.html">Carousel Tutu Set</a></li>
+            </ul>
+
+          </form>
+        </article>
+      </section>
+
+        <!--                             TOP NAV                             -->
+        <ul class="topnav" id="myTopnav">
+          <li class="active-logo">
+            <a class="active-logo" href="../index.html" title="Home">
+            <img src="../images/logoBlack.png" id="logo-image"
+            onmouseover="onHoverItem();" onmouseout="offHoverItem();">
+            </a>
+          </li>
+
+          <li ><a class="rightNav" href="aboutus.html">About Us</a></li>
+          <li class="dropdown">
+            <button  class="dropbtn">
+              <a href="javascript: void(0)">New Arrivals
+                <span class="fas fa-sort-down"></span> </a>
+            </button>
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="tutus.html">Tutus</a></li>
+              <li><a href="#">Headbands</a></li>
+              <li><a href="#">Matching Sets</a></li>
+              <li><a href="#">Personalized Shirts</a></li>
+              <li><a href="#">Dresses</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <button class="dropbtn">
+              <a href="javascript: void(0)">Clothing
+                <span class="fas fa-sort-down"></span> </a>
+            </button>
+            <ul id="dropdown2" class="dropdown-content">
+              <li><a href="onesies.html">Onesies</a></li>
+              <li><a href="#">Matching Sets</a></li>
+              <li><a href="#">Personalized Shirts</a></li>
+              <li><a href="#">Dresses</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <button class="dropbtn">
+              <a href="javascript: void(0)">Accesories & Shoes
+                <span class="fas fa-sort-down"></span> </a>
+            </button>
+            <ul id="dropdown3" class="dropdown-content">
+              <li><a href="shoes.html">Shoes</a></li>
+              <li><a href="#">Headbands</a></li>
+              <li><a href="#">Flower Clips</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown" >
+            <button  class="contact_us_btn" id="my_custom_show_btn">
+              <a href="javascript: void(0)">Contact Us </a>
+            </button>
+          </li>
+
+          <li class="icon">
+            <a id="icon" href="javascript:void(0);" onclick="toggleNav();">
+              <span class="fas fa-bars"></span></a>
+          </li>
+        </ul>
+
+      <!--                     MAIN CONTENT BELOW TOP NAV                    -->
+      <article class="main-content-index">
+
+          <h2 id="flexcontainer-index-title"> Shoes </h2><br>
+
+          <section id="flexcontainer-index">
+              <section class="fleximages-index">
+
+                <a href="#links/item1.html" class="url-links-index">
+                <h3 class="index-item-heading"> Red Comfy Moccacin - $15.99 </h3>
+                <img src="../images/content/items/shoes-1.jpg" id="t1">
+                </a>
+
+                <a href="#links/item2.html" class="url-links-index">
+                  <h3 class="index-item-heading"> Minnie Pinky Shoes - $12.99 </h3>
+                <img src="../images/content/items/shoes-2.jpg" id="t2">
+                </a>
+
+                <a href="#links/item3.html" class="url-links-index">
+                  <h3 class="index-item-heading"> Minnie Redish Shoes - $12.99 </h3>
+                <img src="../images/content/items/shoes-3.jpg" id="t3">
+                </a>
+
+                <a href="#links/item4.html" class="url-links-index">
+                  <h3 class="index-item-heading">  Fashion Toddler Boots - $29.99 </h3>
+                <img src="../images/content/items/shoes-4.jpg" id="t4">
+                </a>
+
+                <a href="#links/item5.html" class="url-links-index">
+                  <h3 class="index-item-heading"> Mary Jane Pink Shoes - $9.99 </h3>
+                <img src="../images/content/items/shoes-5.jpg" id="t5">
+                </a>
+
+                <a href="#links/item6.html" class="url-links-index">
+                  <h3 class="index-item-heading"> Mary Jane Stylish Shoes - $11.99 </h3>
+                <img src="../images/content/items/shoes-6.jpg" id="t6">
+                </a>
+
+            </section>
+          </section>
+      </article>
+      <br><br>
+
+        <!--                      CONTACT US MODAL POP UP                    -->
+        <section id="my_custom_modal" class="custom_modal">
+          <article class="my_custom_modal_content">
+            <article class="my_custom_modal_header">
+              <span id="close" class="close">&times;</span>
+              <h3>Contact Us</h3>
+            </article>
+            <article class="my_custom_modal_body">
+              <section class="contact_info">
+                <p><strong><span class="fab fa-whatsapp  whatsapp_icon"> </span>
+                  Contact No.</strong> (862) 264-0556 </p>
+
+                <br/><br/>
+
+                <p><strong><span class="fas fa-map-marker-alt"> </span>
+                  Address:</strong> 100 North 5th Street, Paterson, NJ, USA</p>
+
+                <br/><br/>
+
+                <p><strong><span class="fas fa-business-time"> </span>
+                  In-Store Hours</strong></p>
+                <br/>
+                <ul>
+                  <li><span class="far fa-clock"></span> Monday:     10:00 AM to 06:00 PM</li>
+                  <li><span class="far fa-clock"></span> Tuesday:    Closed</li>
+                  <li><span class="far fa-clock"></span> Wednesday:  10:00 AM to 06:00 PM</li>
+                  <li><span class="far fa-clock"></span> Thursday:   10:00 AM to 06:00 PM</li>
+                  <li><span class="far fa-clock"></span> Friday:     10:00 AM to 06:00 PM</li>
+                  <li><span class="far fa-clock"></span> Saturday:   10:00 AM to 06:00 PM</li>
+                  <li><span class="far fa-clock"></span> Sunday:     Closed</li>
+                </ul>
+              </section>
+              <section class="contact_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.4529525156877!2d-74.17745888503858!3d40.92773907930902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fdb3b53a8603%3A0x7bf5fca607743ad6!2s100+N+5th+St%2C+Paterson%2C+NJ+07522!5e0!3m2!1sen!2s!4v1542240288675" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </section>
+
+              <section class="clearfix"></section>
+            </article>
+            <article class="my_custom_modal_footer">
+              <!-- <h3>Modal Footer</h3> -->
+            </article>
+          </article>
+        </section>
+      <section id="overlay" class="overlay"></section>
+    </main>
+    <!--                       END OF MAIN CONTENT                           -->
+
+    <!--                             FOOTER                                  -->
+    <footer class="footer">
+        &copy; Copyright 2018 | Lil Cutie Boutique
+    </footer>
+
+    <!--                              SCRIPTS                                -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
